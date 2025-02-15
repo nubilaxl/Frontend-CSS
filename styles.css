@@ -1,0 +1,259 @@
+
+/*
+Week 2 CSS Assignment: by Nubila Levon
+Style the website you made last week using CSS with the following requirements:
+Use only external CSS file (no internal or inline styling)
+Every element must be styled.
+Create style rules using class, id, and element selectors.
+*/
+
+
+
+/* Defining the main theme for the site, margins and background color */
+html {
+    background-color: lightgoldenrodyellow;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* Aligning the main headers for the page center */
+h1 {
+    text-align: center;
+}
+
+/* Secondary headers are underlined */
+h2 {
+    text-decoration-line: underline;
+    text-align: center;
+}
+
+/* Defining a solid border for the images */
+img {
+    border: solid;
+}
+
+/* header background color */
+header  {
+background-color: rgb(229, 229, 190);
+}
+
+/* all pargraphs that are descendents of articles defined here */
+article p {
+    font-style: normal;
+    color: gray;
+}
+
+/* Defining the nav bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+  }
+  
+ nav li {
+    float: left;
+  }
+  
+ nav  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 14px 14px;
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+ nav li a:hover {
+    background-color: #111;
+  }
+
+/* Defining the default grid layout of the home page */
+.home-page{
+
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Defining the aside testimonials on the home page */
+aside {
+    grid-row: span 2;
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+}
+/* Centering the table */
+table {
+margin: auto;
+}
+
+/* Styling the table and header for the table */
+table thead {
+    color: whitesmoke;
+    font-weight: bolder;
+    background-color: #333;
+}
+tbody {
+    font-size: small;
+}
+table tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+table img {
+    width: 200px;
+
+}
+td {
+    border-bottom: solid;
+    border-right: solid thin lightgray;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+/* Styling the form */
+form {
+    background: rgb(229, 229, 190);
+    width: 70%;
+    
+}
+
+form input[type=text] {
+    border: none;
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 50px;   
+}
+    /* a class related to the list of text boxes */
+.textboxgroup {
+    width: 200px;;
+    display: grid;
+    grid-template-columns: auto;
+    line-height: 1.1;
+
+}
+    /* a class for the group of radio buttons. defined with a grid layout */
+.radiogroup {
+
+    width:100%;
+    display: grid;
+    grid-template-columns: 1em auto;
+    line-height: 1.1;
+    gap: 0.5em;
+
+}
+
+/* Styling for the submit button */
+form input[type=submit] {
+    width: 70%;
+    background-color: aquamarine;
+    margin:auto;
+}
+
+/* Styling for the form labels */
+form label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Media queries to fix rendering at default screen sizes */
+@media only screen and (max-width: 1500px) {
+    
+    nav {
+        display:flex;
+        width: 100%;
+      }
+      nav ul {
+          
+          margin: 0;
+          padding: auto;
+          
+        }
+        
+       nav li {
+          float: left;
+        }
+  }
+  
+  /* media query logic for tablet devices */
+  @media only screen and (max-width: 1100px) {
+    body {
+        margin: 3px auto 3px;
+      }
+      
+        
+       nav  li a {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 10px 40px;
+          text-decoration: none;
+          width: 100%;
+        }
+
+  }
+  
+  /* Significant modifications for small devices */
+  @media only screen and (max-width: 500px) {
+    body {
+      margin: 3px auto 3px;
+    }
+    p,
+    li {
+      font-size: 10px;
+    }
+    
+    nav {
+      display:flex;
+    }
+    nav ul {
+        
+        margin: 0;
+        padding: 0;
+        
+      }
+      
+     nav li {
+        float: left;
+      }
+      
+     nav  li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px 40px;
+        text-decoration: none;
+        width: 100%;
+      }
+      table, td, th, thead {
+        display:grid;
+       grid-template-columns: repeat(1, 2fr) ;
+       text-align: center;
+        font-size: x-small;
+    
+    }
+    td:nth-last-of-type(4){
+        grid-row: span 4;
+    }
+    td > img {
+        width: 100%;
+        grid-column: span 4;
+    }
+      .home-page{
+        margin: 3px auto 3px;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    article > img {
+        width: 180px;
+    }
+      aside {
+        color: blue;
+        font-style: italic;
+        font-weight: bold;
+    }
+  }
+  /* ------------------------- */
