@@ -81,7 +81,7 @@ Then install http server using command: npm install -g http-server
 
 To make a local copy of of the code, clone the repository
 ```
-git clone https://nubilaxl.github.io/Frontend-CSS/
+git clone https://github.com/nubilaxl/Frontend-CSS
 cd Frontend-CSS
 ```
 
